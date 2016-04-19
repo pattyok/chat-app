@@ -1,6 +1,6 @@
 <ion-view view-title="Account">
   <ion-content>
-    <form name="account" ng-submit="submitAccount()"
+    <form name="account">
       <ion-list>
         <label class="item item-input item-floating-label">
           <span class="input-label">First Name</span>
@@ -14,8 +14,10 @@
           <span class="input-label">Email</span>
           <input type="text" placeholder="Email" ng-model="user.email">
         </label>
-        <input type="submit" class="button button-positive" value="Create Account">
       </ion-list>
+      <button class="button button-balanced icon-left ion-camera" ng-click="getPicture()">Add Image</button>
+      <button class="button button-positive" ng-click="submitAccount()">Update Account</button>
+      
     </form>
   </ion-content>
 </ion-view>

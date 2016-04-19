@@ -1,6 +1,7 @@
 <ion-view view-title="Account">
   <ion-content>
     <form name="account">
+      <img class="avatar" ng-src="{{user.avatar}}"/>
       <ion-list>
         <label class="item item-input item-floating-label">
           <span class="input-label">First Name</span>
@@ -15,9 +16,9 @@
           <input type="text" placeholder="Email" ng-model="user.email">
         </label>
       </ion-list>
-      <button class="button button-balanced icon-left ion-camera" ng-click="getPicture()">Add Image</button>
+      <button class="button button-balanced icon-left ion-camera" ng-click="openPictureOptions()">Add Image</button>
       <button class="button button-positive" ng-click="submitAccount()">Update Account</button>
-      
+
     </form>
   </ion-content>
 </ion-view>

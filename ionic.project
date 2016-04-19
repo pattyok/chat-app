@@ -1,4 +1,10 @@
 {
   "name": "chatApp",
-  "app_id": ""
+  "app_id": "92aa77b2",
+  "watchPatterns": [
+    "www/app/*",
+    "www/app/**/*",
+    "www/css/*",
+    "www/js/*"
+  ]
 }

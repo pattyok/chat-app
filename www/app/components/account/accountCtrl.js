@@ -1,7 +1,7 @@
 angular.module('app.controllers')
 .controller('AccountCtrl', function($scope, $state, $cordovaCamera, $cordovaActionSheet, UserService) {
   $scope.user = UserService.getUser('current');
-  
+
   $scope.openPictureOptions = function () {
     var options = {
       title: 'Select Image Source',
@@ -42,8 +42,7 @@ angular.module('app.controllers')
         };
 
         $cordovaCamera.getPicture(options).then(function(imageURI) {
-          alert(imageURI);
-          $scope.user.avatar = imageURI;
+          $scope.user.face = imageURI;
         }, function(err) {
           // error
         });

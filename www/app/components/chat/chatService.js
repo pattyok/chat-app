@@ -16,7 +16,7 @@ angular.module('app.services')
     id: 2,
     users: [2, 'current'],
     messages: [{
-      message: 'I\'m gonna buy a boat today.',
+      message: 'Buy a boat today, I will.',
       user: 2
     }]
   }, {

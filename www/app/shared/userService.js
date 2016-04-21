@@ -15,7 +15,7 @@ angular.module('app.services')
     }, {
       id: 2,
       name: 'Lizzie Yodason',
-      lastText: 'I\'m gonna buy a boat',
+      lastText: 'Buy a boat today, I will.',
       face: 'img/business-cat-white-collar-tie.jpg',
       chatId: 2
     }, {

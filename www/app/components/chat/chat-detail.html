@@ -3,13 +3,13 @@
     <ion-list>
       <ion-item class="item-input-inset">
         <label class="item-input-wrapper">
-          <input type="text" placeholder="What's up?" ng-model="data.newMessage">
+          <input type="text" placeholder="What's up?" ng-model="data.newMessage" style="width: 100%">
         </label>
         <button class="button button-small button-balanced" ng-click="sendChat()">
           Send
         </button>
       </ion-item>
-      <ion-item ng-repeat="message in chat.messages">
+      <ion-item ng-repeat="message in chat.messages" class="item-text-wrap">
         <img class="avatar avatar-small" ng-src="{{users[message.user].face}}">
         {{message.message}}
       </ion-item>

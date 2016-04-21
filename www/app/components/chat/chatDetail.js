@@ -27,13 +27,14 @@ angular.module('app.controllers', [])
   $scope.data = {};//initialize data, ng-model must have a 'dot'
   $scope.sendChat = function () {
     addMessage('current', $scope.data.newMessage);
-    $scope.data.newMessage = '';
-
-    Chats.getReply($scope.chat.users[0], function(err, msg){
+    
+    Chats.getReply($scope.chat.users[0], $scope.data.newMessage, function(msg){
       msg = msg.replace('<p>', '');
       msg = msg.replace('</p>', '');
       addMessage($scope.chat.users[0], msg);
     });
+    $scope.data.newMessage = '';
+
   };
 
 });

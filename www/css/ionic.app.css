@@ -9735,3 +9735,7 @@ a.button {
   height: 100px;
   width: 100px;
   border-radius: 50%; }
+
+.avatar-small {
+  height: 50px;
+  width: 50px; }

@@ -1,6 +1,7 @@
 angular.module('app.controllers')
 .controller('AccountCtrl', function($scope, $state, $cordovaCamera, $cordovaActionSheet, UserService) {
-  $scope.user = UserService.data;
+  $scope.user = UserService.getUser('current');
+  
   $scope.openPictureOptions = function () {
     var options = {
       title: 'Select Image Source',
@@ -52,8 +53,7 @@ angular.module('app.controllers')
   };
 
   $scope.submitAccount = function() {
-    console.log($scope.user);
     UserService.updateUser($scope.user);
-    $state.go('contact.detail');
+    $state.go('tab.chats');
   };
 });
